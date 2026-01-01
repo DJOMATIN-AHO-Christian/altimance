@@ -277,14 +277,12 @@ Dans `admin.js`, modifier les options des select :
 
 ## 📝 Licence
 
-© 2024 ALTIMANCE - Tous droits réservés
+© 2025 ALTIMANCE - Tous droits réservés
 
 ## 👥 Support
 
 Pour toute question ou problème :
-- Email: admin@altimance.com
+- Email: djomatinahochristian@gmail.com
 - Documentation: Ce fichier README.md
 
 ---
-
-**Développé avec ❤️ pour ALTIMANCE**
