@@ -1,40 +1,40 @@
-# 🚀 Dashboard Admin ALTIMANCE
+#  Dashboard Admin ALTIMANCE
 
 ## Vue d'Ensemble
 
 Système de gestion complet pour le site ALTIMANCE avec backend Node.js, base de données SQLite et interface d'administration moderne.
 
-## 🎯 Fonctionnalités
+##  Fonctionnalités
 
 ### Backend
-- ✅ API REST complète
-- ✅ Base de données SQLite
-- ✅ Authentification JWT
-- ✅ Protection des routes admin
-- ✅ CORS activé
+-  API REST complète
+-  Base de données SQLite
+-  Authentification JWT
+-  Protection des routes admin
+-  CORS activé
 
 ### Dashboard Admin
-- ✅ Connexion sécurisée
-- ✅ Statistiques en temps réel
-- ✅ Graphiques (Chart.js)
-- ✅ Gestion des contacts
-- ✅ Gestion des candidatures
-- ✅ Modification des statuts
-- ✅ Suppression des données
+-  Connexion sécurisée
+-  Statistiques en temps réel
+-  Graphiques (Chart.js)
+-  Gestion des contacts
+-  Gestion des candidatures
+-  Modification des statuts
+-  Suppression des données
 
 ### Intégration Frontend
-- ✅ Formulaires connectés à l'API
-- ✅ Validation côté client
-- ✅ Notifications de succès/erreur
-- ✅ Envoi automatique vers base de données
+-  Formulaires connectés à l'API
+-  Validation côté client
+-  Notifications de succès/erreur
+-  Envoi automatique vers base de données
 
-## 📋 Prérequis
+##  Prérequis
 
 - Node.js (version 14 ou supérieure)
 - npm (inclus avec Node.js)
 - Navigateur web moderne
 
-## 🔧 Installation
+##  Installation
 
 ### 1. Installer les dépendances
 
@@ -66,7 +66,7 @@ npm run dev
 
 Le serveur démarrera sur `http://localhost:3000`
 
-## 🎮 Utilisation
+##  Utilisation
 
 ### Accès au Dashboard
 
@@ -78,18 +78,18 @@ Le serveur démarrera sur `http://localhost:3000`
 
 ### Sections du Dashboard
 
-#### 📊 Tableau de Bord
+####  Tableau de Bord
 - Vue d'ensemble avec 4 statistiques principales
 - Graphiques circulaires pour contacts et candidatures
 - Actualisation automatique toutes les 30 secondes
 
-#### 📧 Contacts
+####  Contacts
 - Liste de tous les messages reçus
 - Modification des statuts (Nouveau, En cours, Traité)
 - Visualisation du message complet
 - Suppression des contacts
 
-#### 💼 Candidatures
+####  Candidatures
 - Liste de toutes les candidatures
 - Modification des statuts (En attente, Accepté, Refusé)
 - Visualisation de la lettre de motivation
@@ -109,7 +109,7 @@ Le serveur démarrera sur `http://localhost:3000`
 3. La candidature est enregistrée dans la base de données
 4. Visible dans l'onglet "Candidatures" du dashboard
 
-## 🗄️ Structure de la Base de Données
+##  Structure de la Base de Données
 
 ### Table: users
 - id (PRIMARY KEY)
@@ -141,7 +141,7 @@ Le serveur démarrera sur `http://localhost:3000`
 - status (en_attente, accepte, refuse)
 - created_at
 
-## 🔐 Sécurité
+##  Sécurité
 
 - Mots de passe hashés avec bcrypt
 - Authentification par JWT
@@ -149,7 +149,7 @@ Le serveur démarrera sur `http://localhost:3000`
 - Protection des routes admin
 - Validation côté serveur
 
-## 📁 Fichiers Créés
+##  Fichiers Créés
 
 ### Backend
 - `server.js` - Serveur Express avec API REST
@@ -165,7 +165,7 @@ Le serveur démarrera sur `http://localhost:3000`
 ### Intégration
 - `api-integration.js` - Connecte les formulaires à l'API
 
-## 🔗 Endpoints API
+##  Endpoints API
 
 ### Authentication
 - `POST /api/auth/login` - Connexion
@@ -186,7 +186,7 @@ Le serveur démarrera sur `http://localhost:3000`
 ### Statistiques
 - `GET /api/stats` - Récupérer les statistiques (admin)
 
-## ⚙️ Configuration
+##  Configuration
 
 ### Modifier le port
 
@@ -212,7 +212,7 @@ INSERT INTO users (username, email, password, role)
 VALUES ('nouveauadmin', 'admin@example.com', 'hash_du_password', 'admin');
 ```
 
-## 🚨 Dépannage
+##  Dépannage
 
 ### Le serveur ne démarre pas
 - Vérifier que Node.js est installé : `node --version`
@@ -233,7 +233,7 @@ VALUES ('nouveauadmin', 'admin@example.com', 'hash_du_password', 'admin');
 - Le serveur a CORS activé par défaut
 - Si problème persiste, vérifier la configuration dans `server.js`
 
-## 📊 Exemple de Flux de Travail
+##  Exemple de Flux de Travail
 
 1. **Utilisateur remplit le formulaire de contact**
    → Données envoyées vers `/api/contacts`
@@ -250,7 +250,7 @@ VALUES ('nouveauadmin', 'admin@example.com', 'hash_du_password', 'admin');
    → Affichage dans le tableau
    → Possibilité de modifier le statut ou supprimer
 
-## 🎨 Personnalisation
+##  Personnalisation
 
 ### Modifier les statuts disponibles
 
@@ -264,7 +264,7 @@ Dans `admin.js`, modifier les options des select :
 <option value="votre_statut">Votre Statut</option>
 ```
 
-## 📈 Améliorations Futures
+##  Améliorations Futures
 
 - [ ] Upload de CV pour les candidatures
 - [ ] Export des données en CSV/Excel
@@ -275,7 +275,7 @@ Dans `admin.js`, modifier les options des select :
 - [ ] Gestion multi-utilisateurs avec rôles
 - [ ] Logs d'activité admin
 
-## 📝 Licence
+##  Licence
 
 © 2025 ALTIMANCE - Tous droits réservés
 
