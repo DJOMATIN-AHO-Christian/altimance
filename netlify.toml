@@ -1,0 +1,14 @@
+# Note: altimance is a Node.js/Express backend application.
+# Netlify is primarily for static sites and serverless functions.
+# This configuration deploys the project but the Express server
+# will NOT run on Netlify. Consider using Railway, Render, or Heroku
+# for full backend deployment.
+#
+# If you have a static frontend, point 'publish' to that directory instead.
+
+[build]
+  publish = "."
+  command = ""
+
+[build.environment]
+  NODE_VERSION = "20"
