@@ -118,9 +118,66 @@
         </section>
     </main>
     <div id="footer-container"></div>
-    <script src="components.js"></script>
-    <script src="main.js"></script>
-    <script src="enhanced.js"></script>
-</body>
+    <script>
+        // Charger les news dynamiquement
+        async function loadNews() {
+            try {
+                const response = await fetch('php/get_news.php');
+                const data = await response.json();
+                
+                if (data.success) {
+                    const grid = document.querySelector('.grid');
+                    grid.innerHTML = ''; // Nettoyer le contenu statique
+                    
+                    data.news.forEach(article => {
+                        const html = `
+                            <article class="bg-slate-50 dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all">
+                                <div class="h-48 bg-gradient-to-br ${article.color_gradient} flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-7xl">${article.icon}</span>
+                                </div>
+                                <div class="p-6">
+                                    <span class="text-xs font-bold text-primary uppercase">${article.date_published}</span>
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2 mb-3">${article.title}</h3>
+                                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">
+                                        ${article.content}
+                                    </p>
+                                    <button class="text-primary font-semibold text-sm hover:underline">Lire la suite</button>
+                                </div>
+                            </article>
+                        `;
+                        grid.insertAdjacentHTML('beforeend', html);
+                    });
+                }
+            } catch (error) {
+                console.error('Erreur chargement news:', error);
+            }
+        }
 
+        // Gérer le formulaire de newsletter
+        document.addEventListener('DOMContentLoaded', () => {
+            loadNews();
+            
+            const newsletterForm = document.querySelector('section form');
+            newsletterForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const formData = new FormData(newsletterForm);
+                
+                try {
+                    const response = await fetch('php/newsletter.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await response.json();
+                    
+                    alert(data.message);
+                    if (data.success) {
+                        newsletterForm.reset();
+                    }
+                } catch (error) {
+                    alert('Une erreur est survenue.');
+                }
+            });
+        });
+    </script>
+</body>
 </html>
