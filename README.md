@@ -1,5 +1,7 @@
 #  Dashboard Admin ALTIMANCE
 
+Aperçu : https://altimance.netlify.app/
+
 ## Vue d'Ensemble
 
 Système de gestion complet pour le site ALTIMANCE avec backend Node.js, base de données SQLite et interface d'administration moderne.
